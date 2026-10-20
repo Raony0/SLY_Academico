@@ -1,0 +1,97 @@
+/* ESTILOS EXCLUSIVOS DA PAGINA ABOUT */
+.sly-way {
+	padding: 110px 0; /* Cria espaco ao redor do manifesto da marca. */
+	background: var(--black); /* Destaca a secao com fundo escuro. */
+	color: white; /* Mantem os textos legiveis sobre o fundo escuro. */
+}
+.manifesto-grid {
+	margin-top: 60px; /* Separa os quatro elementos do titulo da secao. */
+}
+.manifesto-item {
+	min-height: 280px; /* Mantem altura consistente entre os elementos. */
+	padding: 28px; /* Cria respiro interno nos elementos. */
+	border-top: 1px solid #555; /* Marca o inicio de cada elemento. */
+	border-left: 1px solid #555; /* Separa visualmente as colunas. */
+}
+.manifesto-item:first-child {
+	border-left: 0; /* Remove a borda antes do primeiro elemento. */
+}
+.manifesto-item span {
+	color: #888; /* Deixa a numeracao em segundo plano. */
+	font-size: 11px; /* Mantem a numeracao discreta. */
+}
+.manifesto-item h3 {
+	margin: 60px 0 20px; /* Posiciona o titulo mais abaixo da numeracao. */
+	font-size: 25px; /* Define o destaque do nome do elemento. */
+	font-weight: 600; /* Destaca o nome do elemento. */
+}
+.manifesto-item p {
+	max-width: 280px; /* Evita linhas muito longas. */
+	margin: 0; /* Remove a margem padrao do paragrafo. */
+	color: #aaa; /* Suaviza o texto descritivo. */
+	font-size: 14px; /* Define o tamanho da descricao. */
+	line-height: 1.7; /* Melhora a leitura da descricao. */
+}
+.details-section {
+	padding-bottom: 130px; /* Cria espaco apos a secao de detalhes. */
+}
+
+
+/* Define a área visível do carrossel. */
+.details-carousel {
+	position: relative;
+	overflow: hidden;
+	background: #e9e9e6;
+	max-width: 1150px;
+	margin: 0 auto;
+}
+/* Organiza os slides em uma faixa horizontal. */
+.details-carousel .details-slide {
+	display: none;
+	position: relative;
+}
+/* Exibe o slide selecionado pelo link da seta. */
+.details-carousel .details-slide:target {
+	display: block;
+}
+/* Exibe a primeira imagem quando nenhum slide foi selecionado. */
+.details-carousel:not(:has(.details-slide:target)) #detail-1 {
+	display: block;
+}
+/* Ajusta as imagens ao espaço disponível. */
+.details-slide img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+/* Posiciona e estiliza as setas de navegação. */
+.details-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.7);
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+	transition: background 0.3s ease;
+}
+/* Posiciona a seta à esquerda. */
+.details-prev {
+	left: 16px;
+}
+/* Posiciona a seta à direita. */
+.details-next {
+	right: 16px;
+}
+/* Clareia as setas ao passar o mouse. */
+.details-arrow:hover {
+	background: #000;
+	color: #fff;
+}
+

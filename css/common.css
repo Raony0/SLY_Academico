@@ -1,0 +1,308 @@
+/* CONFIGURACOES GERAIS */
+:root {
+	--black: #0b0b0b; /* Cor principal dos textos e fundos escuros. */
+	--white: #f5f5f2; /* Fundo claro do site. */
+	--gray: #6d6d68; /* Cor secundaria para textos. */
+	--line: #d2d2cc; /* Cor das bordas sutis. */
+	--display: "Cormorant Garamond", Georgia, serif; /* Fonte dos titulos. */
+	--body: "Montserrat", Arial, sans-serif; /* Fonte dos textos comuns. */
+}
+/* RESET E PADROES */
+* {
+	box-sizing: border-box; /* Inclui padding e bordas no tamanho dos elementos. */
+}
+body {
+	margin: 0; /* Remove a margem padrao do navegador. */
+	background: var(--white); /* Mantem o fundo claro em todas as paginas. */
+	color: var(--black); /* Define a cor padrao do texto. */
+	font-family: var(--body); /* Aplica a fonte principal do site. */
+	overflow-x: hidden; /* Evita rolagem horizontal acidental. */
+}
+img {
+	max-width: 100%; /* Impede imagens de ultrapassarem o elemento pai. */
+}
+a {
+	color: inherit; /* Usa a cor do contexto. */
+	text-decoration: none; /* Remove o sublinhado padrao dos links. */
+}
+button, input, textarea {
+	font: inherit; /* Mantem a tipografia consistente nos controles. */
+}
+/* CABECALHO E NAVEGACAO */
+.site-header {
+	position: sticky; /* Mantem a navegacao visivel durante a rolagem. */
+	top: 0; /* Fixa o cabecalho no topo. */
+	z-index: 10; /* Sobrepoe o conteudo que passa por baixo. */
+	background: rgba(245, 245, 242, .96); /* Mantem o fundo levemente translucido. */
+	border-bottom: 1px solid var(--line); /* Separa o cabecalho do conteudo. */
+	backdrop-filter: blur(12px); /* Suaviza o conteudo que fica atras do cabecalho. */
+}
+.academic-navbar, .academic-navbar .container-fluid {
+	min-height: 64px; /* Mantem uma altura consistente para a navegacao. */
+}
+.academic-navbar {
+	padding: 0; /* Remove o espacamento vertical padrao do Bootstrap. */
+}
+.academic-navbar .container-fluid {
+	display: flex; /* Organiza logo e links na mesma linha. */
+	align-items: center; /* Alinha os itens verticalmente. */
+	justify-content: space-between; /* Distribui os itens pelo cabecalho. */
+	position: relative; /* Serve de referencia para centralizar a marca. */
+}
+.sly-logo {
+	position: absolute; /* Permite centralizar a marca independentemente dos links. */
+	left: 50%; /* Move a marca para o centro horizontal. */
+	transform: translateX(-50%); /* Corrige o centro usando a largura da marca. */
+	font-family: var(--display); /* Usa a fonte editorial da marca. */
+	font-size: 29px; /* Define o tamanho da marca no cabecalho. */
+	font-weight: 700; /* Destaca a marca. */
+	letter-spacing: 2px; /* Da respiro entre as letras. */
+	color: var(--black); /* Mantem a marca preta. */
+}
+.academic-nav {
+	display: flex; /* Mantem os links em linha no desktop. */
+	flex-direction: row; /* Organiza os links horizontalmente. */
+	gap: 24px; /* Separa os links da navegacao. */
+	margin: 0; /* Remove a margem padrao da lista. */
+	padding: 0; /* Remove o recuo padrao da lista. */
+	list-style: none; /* Remove marcadores da lista. */
+}
+.nav-link {
+	padding: 8px 0 !important; /* Padroniza a area dos links. */
+	color: var(--black) !important; /* Mantem os links na cor da marca. */
+	font-size: 12px; /* Mantem os links discretos. */
+	font-weight: 400; /* Usa peso normal nos links inativos. */
+	letter-spacing: .08em; /* Espaca as letras dos links. */
+	text-transform: uppercase; /* Exibe os links em maiusculas. */
+	transition: font-weight .2s ease; /* Suaviza a mudanca de peso no hover. */
+}
+.nav-link:hover, .nav-link.active {
+	font-weight: 700; /* Destaca o link sob o mouse ou da pagina atual. */
+}
+/* ELEMENTOS COMPARTILHADOS */
+.section {
+	padding: 110px 0; /* Define o espacamento vertical das secoes. */
+}
+.eyebrow {
+	margin: 0 0 15px; /* Separa o pequeno rotulo do conteudo seguinte. */
+	font-size: 10px; /* Mantem o rotulo discreto. */
+	font-weight: 600; /* Da destaque ao rotulo. */
+	letter-spacing: .18em; /* Aplica o estilo editorial da marca. */
+	text-transform: uppercase; /* Exibe o rotulo em maiusculas. */
+}
+.section-title {
+	margin: 0; /* Remove margens padrao dos titulos de secao. */
+	font-family: var(--display); /* Aplica a fonte editorial. */
+	font-size: clamp(50px, 7vw, 105px); /* Ajusta o titulo conforme a largura da tela. */
+	font-weight: 500; /* Mantem o titulo elegante e leve. */
+	line-height: .9; /* Aproxima as linhas do titulo. */
+	letter-spacing: -.035em; /* Aproxima levemente as letras. */
+}
+.section-description {
+	margin: 0; /* Remove a margem padrao do paragrafo. */
+	color: #4f4f4b; /* Diferencia o texto secundario do texto principal. */
+	font-size: 15px; /* Define o tamanho do texto descritivo. */
+	line-height: 1.7; /* Melhora a leitura dos paragrafos. */
+}
+.editorial-hero {
+	padding: 130px 0 100px; /* Cria espaco ao redor do titulo editorial. */
+	border-bottom: 1px solid var(--line); /* Separa o topo da pagina do conteudo. */
+}
+.editorial-title {
+	margin: 30px 0 20px; /* Separa o titulo dos textos ao redor. */
+	font-family: var(--display); /* Usa a fonte de destaque da marca. */
+	font-size: clamp(70px, 12vw, 180px); /* Redimensiona o titulo entre telas. */
+	font-weight: 700; /* Destaca o titulo principal. */
+	line-height: .82; /* Mantem o titulo compacto. */
+	letter-spacing: -.045em; /* Reforca o visual editorial. */
+}
+.editorial-subtitle {
+	margin: 0; /* Remove a margem padrao do subtitulo. */
+	font-size: clamp(18px, 2vw, 30px); /* Adapta o subtitulo ao tamanho da tela. */
+}
+.large-copy {
+	margin: 0; /* Remove a margem padrao do texto em destaque. */
+	font-family: var(--display); /* Usa a fonte editorial. */
+	font-size: clamp(35px, 4vw, 65px); /* Ajusta o texto em destaque conforme a tela. */
+	line-height: 1.05; /* Mantem as linhas proximas. */
+	letter-spacing: -.025em; /* Aproxima levemente as letras. */
+}
+/* BOTOES */
+.sly-button, .sly-submit {
+	display: inline-flex; /* Alinha texto e icone lado a lado. */
+	align-items: center; /* Centraliza o conteudo verticalmente. */
+	gap: 10px; /* Separa texto e icone. */
+	padding: 16px 24px; /* Define a area clicavel. */
+	border: 0; /* Remove a borda padrao. */
+	border-radius: 50px; /* Arredonda as extremidades. */
+	font-size: 11px; /* Mantem o texto do botao compacto. */
+	font-weight: 600; /* Destaca o texto do botao. */
+	letter-spacing: .1em; /* Aplica o estilo tipografico da marca. */
+	text-transform: uppercase; /* Exibe o texto em maiusculas. */
+	transition: transform .3s ease, background .3s ease, color .3s ease; /* Suaviza os efeitos visuais. */
+	cursor: pointer; /* Indica que o elemento pode ser acionado. */
+}
+.sly-button:hover, .sly-submit:hover {
+	transform: translateY(-2px); /* Eleva levemente o botao ao passar o mouse. */
+}
+.sly-button-light {
+	background: white; /* Cria contraste no hero escuro. */
+	color: black; /* Mantem o texto legivel. */
+}
+.sly-button-light:hover {
+	background: black; /* Inverte o fundo no hover. */
+	color: white; /* Inverte a cor do texto no hover. */
+}
+/* CARDS E PRODUTOS */
+.product-card {
+	height: 100%; /* Mantem todos os cards da linha com altura igual. */
+	border: 0; /* Remove a borda padrao do Bootstrap. */
+	border-radius: 0; /* Mantem os cantos retos do visual editorial. */
+	background: transparent; /* Integra o card ao fundo da pagina. */
+}
+.product-card .card-img-top {
+	width: 100%; /* Faz a imagem ocupar a largura do card. */
+	aspect-ratio: 4 / 5; /* Padroniza a proporcao das imagens. */
+	object-fit: cover; /* Preenche a area sem distorcer a imagem. */
+	background: #e9e9e6; /* Exibe um fundo neutro durante o carregamento. */
+}
+.product-card .card-body {
+	display: flex; /* Organiza o conteudo do card em coluna. */
+	flex-direction: column; /* Coloca textos e botao um abaixo do outro. */
+	align-items: flex-start; /* Alinha o conteudo a esquerda. */
+	padding: 18px 0; /* Espaca o conteudo em relacao a imagem. */
+}
+.product-card .badge {
+	margin-bottom: 12px; /* Separa a categoria do nome do produto. */
+	font-size: 9px; /* Mantem a categoria discreta. */
+	letter-spacing: .08em; /* Aplica espacamento tipografico. */
+}
+.product-card .card-title {
+	margin: 0 0 8px; /* Separa o nome da descricao. */
+	font-size: 15px; /* Define o tamanho do nome do produto. */
+	font-weight: 600; /* Destaca o nome do produto. */
+}
+.product-card .card-text {
+	font-size: 13px; /* Mantem a descricao compacta. */
+	line-height: 1.6; /* Facilita a leitura da descricao. */
+}
+.product-price {
+	margin: 0 0 16px; /* Separa o preco do botao. */
+	font-size: 14px; /* Define o tamanho do preco. */
+	font-weight: 600; /* Destaca o preco. */
+}
+.product-card .btn {
+	margin-top: auto; /* Alinha os botoes na base dos cards. */
+	border-radius: 0; /* Mantem o estilo reto dos botoes de produto. */
+	font-size: 11px; /* Mantem o botao discreto. */
+	text-transform: uppercase; /* Padroniza o texto do botao. */
+}
+/* RODAPE */
+.site-footer {
+	padding: 25px 16px; /* Cria respiro ao redor do copyright. */
+	border-top: 1px solid var(--line); /* Separa o rodape do conteudo. */
+	font-size: 10px; /* Mantem o copyright discreto. */
+	letter-spacing: .04em; /* Aplica um leve espaco entre letras. */
+	text-align: center; /* Centraliza o copyright. */
+}
+/* RESPONSIVIDADE: CELULARES E TELAS PEQUENAS */
+@media (max-width: 767px) {
+	.academic-navbar .container-fluid {
+		min-height: auto; /* Permite que a navegacao cresca se precisar quebrar linha. */
+		flex-wrap: wrap; /* Permite distribuir logo e links em duas linhas. */
+		justify-content: center; /* Centraliza os itens no mobile. */
+		padding-top: 12px; /* Cria espaco acima da marca. */
+		padding-bottom: 10px; /* Cria espaco abaixo dos links. */
+	}
+	.sly-logo {
+		position: static; /* Retira o posicionamento absoluto da marca. */
+		transform: none; /* Remove o deslocamento de centralizacao do desktop. */
+		margin: 0 auto 8px; /* Centraliza a marca na primeira linha. */
+		width: 100%; /* Deixa a marca em uma linha propria. */
+		text-align: center; /* Centraliza o texto da marca. */
+	}
+	.academic-nav {
+		justify-content: center; /* Centraliza os links de navegacao. */
+		flex-wrap: wrap; /* Permite quebrar os links em telas estreitas. */
+		gap: 8px 18px; /* Reduz o espaco entre os links no celular. */
+	}
+	.nav-link {
+		font-size: 10px; /* Reduz o tamanho dos links em telas pequenas. */
+	}
+	.section {
+		padding: 65px 0; /* Reduz o espaco vertical das secoes no celular. */
+	}
+	.editorial-hero {
+		padding: 75px 0 60px; /* Reduz o espaco do topo editorial no celular. */
+	}
+	.editorial-title {
+		font-size: clamp(58px, 17vw, 100px); /* Evita titulos grandes demais em telas estreitas. */
+	}
+	.section-title {
+		font-size: clamp(44px, 12vw, 68px); /* Ajusta titulos de secao para o celular. */
+	}
+	.large-copy {
+		font-size: clamp(34px, 9vw, 48px); /* Ajusta o texto grande para o celular. */
+	}
+	.product-card .card-body {
+		padding-top: 12px; /* Reduz o espaco acima dos textos do produto. */
+	}
+	.sly-form {
+		padding: 24px 18px; /* Evita que o formulario fique apertado no celular. */
+	}
+}
+@media (max-width: 400px) {
+	.academic-nav {
+		gap: 6px 12px; /* Ajusta a navegacao em celulares muito estreitos. */
+	}
+	.academic-nav .nav-link {
+		font-size: 9px; /* Evita que os links ocupem largura excessiva. */
+	}
+}
+/* AJUSTES MOBILE ESPECIFICOS DAS PAGINAS */
+@media (max-width: 767px) {
+	.hero, .hero-container {
+		min-height: 75vh; /* Evita um hero excessivamente alto no celular. */
+	}
+	.hero-content {
+		padding-bottom: 45px; /* Ajusta a posicao do conteudo no celular. */
+	}
+	.statement-section {
+		padding: 85px 0; /* Reduz o espaco da frase final no celular. */
+	}
+}
+/* AJUSTES MOBILE ESPECIFICOS DAS PAGINAS */
+@media (max-width: 767px) {
+	.sly-way {
+		padding: 70px 0; /* Reduz o espaco da secao escura no celular. */
+	}
+	.manifesto-grid {
+		margin-top: 35px; /* Reduz o espaco acima dos elementos. */
+	}
+	.manifesto-item {
+		min-height: auto; /* Permite que cada elemento use a altura necessaria. */
+		padding: 24px 18px; /* Reduz o espacamento interno. */
+		border-left: 0; /* Evita bordas laterais em colunas empilhadas. */
+	}
+	.manifesto-item h3 {
+		margin: 30px 0 12px; /* Reduz o espaco acima do titulo do elemento. */
+	}
+	.details-section {
+		padding-bottom: 70px; /* Reduz o espaco final da pagina. */
+	}
+}
+/* AJUSTES MOBILE ESPECIFICOS DAS PAGINAS */
+@media (max-width: 767px) {
+	.products-section {
+		padding: 45px 0 70px; /* Reduz o espaco ao redor dos produtos no celular. */
+	}
+}
+/* AJUSTES MOBILE ESPECIFICOS DAS PAGINAS */
+@media (max-width: 767px) {
+	.contact-section {
+		padding-bottom: 70px; /* Reduz o espaco inferior no celular. */
+	}
+	.contact-links {
+		margin-top: 30px; /* Reduz a distancia dos links no celular. */
+	}
+}

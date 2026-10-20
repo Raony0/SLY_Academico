@@ -1,0 +1,98 @@
+/* ESTILOS EXCLUSIVOS DA PAGINA INICIAL */
+.hero {
+	position: relative; /* Cria a area de destaque da pagina inicial. */
+	min-height: calc(100vh - 64px); /* Ocupa quase toda a altura da tela. */
+	background: url("../images/Collection001Cover.png") center / cover no-repeat; /* Usa a imagem principal como fundo. */
+}
+.hero-overlay {
+	position: absolute; /* Posiciona a camada sobre a imagem. */
+	inset: 0; /* Estende a camada por toda a area do hero. */
+	background: linear-gradient(90deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .12)); /* Melhora o contraste do texto. */
+}
+.hero-container {
+	position: relative; /* Mantem o conteudo acima da camada escura. */
+	display: flex; /* Permite posicionar o conteudo no fundo do hero. */
+	align-items: flex-end; /* Alinha o conteudo na parte inferior. */
+	min-height: calc(100vh - 64px); /* Acompanha a altura do hero. */
+}
+.hero-content {
+	width: 100%; /* Usa toda a largura disponivel. */
+	max-width: 900px; /* Evita linhas de texto muito longas. */
+	padding-bottom: 80px; /* Afasta o conteudo da borda inferior. */
+}
+.hero-eyebrow, .hero h1 {
+	color: white; /* Mantem os textos legiveis sobre a imagem escura. */
+}
+.hero h1, .statement-section h2 {
+	margin: 0; /* Remove margens padrao dos titulos grandes. */
+	font-family: var(--display); /* Aplica a fonte editorial. */
+	font-size: clamp(60px, 10vw, 155px); /* Ajusta o titulo ao tamanho da tela. */
+	font-weight: 500; /* Mantem o titulo elegante. */
+	line-height: .82; /* Aproxima as linhas do titulo. */
+	letter-spacing: -.04em; /* Aproxima levemente as letras. */
+}
+.hero-description {
+	max-width: 550px; /* Limita a largura da descricao. */
+	margin: 28px 0; /* Separa a descricao do titulo e do botao. */
+	color: rgba(255, 255, 255, .8); /* Usa branco suavizado sobre a imagem. */
+	font-size: clamp(15px, 1.5vw, 21px); /* Adapta o texto a tela. */
+	line-height: 1.5; /* Facilita a leitura. */
+}
+.collection-intro {
+	padding-bottom: 70px; /* Aproxima a introducao da colecao dos produtos. */
+}
+.featured-products {
+	padding-bottom: 120px; /* Cria espaco apos os produtos em destaque. */
+}
+.statement-section {
+	padding: 150px 0; /* Destaca a frase final da pagina. */
+	background: #e4e4df; /* Diferencia visualmente a secao final. */
+}
+.statement-section h2 {
+	margin-top: 25px; /* Separa a frase do rotulo acima. */
+}
+.statement-section em {
+	font-weight: 400; /* Diferencia a parte em italico da frase. */
+}
+
+
+/* Organiza as imagens da peça no mesmo espaço. */
+.product-images {
+	position: relative;
+	width: 100%;
+	background: #e9e9e6;
+}
+/* Mantém as imagens na proporção original. */
+.product-images img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+/* Sobrepõe a imagem das costas à imagem da frente. */
+.product-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease;
+}
+/* Mostra as costas ao passar o mouse sobre a peça. */
+.product-images:hover .product-back {
+	opacity: 1;
+}
+/* Esconde a frente durante a troca. */
+.product-images:hover .product-front {
+	opacity: 0;
+}
+/* Suaviza a troca da imagem da frente. */
+.product-front {
+	transition: opacity 0.8s ease;
+}
+/* Define o fundo e a estrutura do card de cada peça. */
+.product-card {
+	background: #e5e3df;
+	border: 8px solid #e5e3df;
+	border-radius: 2px;
+	overflow: hidden;
+}
+

@@ -1,0 +1,46 @@
+/* ESTILOS EXCLUSIVOS DA PAGINA COLLECTION */
+.products-section {
+	padding: 80px 0 130px; /* Define o espaco ao redor da colecao. */
+}
+.collection-header .editorial-subtitle {
+	max-width: 600px; /* Limita a largura do subtitulo da colecao. */
+}
+/* Organiza as imagens da peça no mesmo espaço. */
+.product-images {
+	position: relative;
+	width: 100%;
+	background: #e9e9e6;
+}
+/* Mantém as imagens na proporção original. */
+.product-images img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+/* Sobrepõe a imagem das costas à imagem da frente. */
+.product-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease;
+}
+/* Mostra as costas ao passar o mouse sobre a peça. */
+.product-images:hover .product-back {
+	opacity: 1;
+}
+/* Esconde a frente durante a troca. */
+.product-images:hover .product-front {
+	opacity: 0;
+}
+/* Suaviza a troca da imagem da frente. */
+.product-front {
+	transition: opacity 0.8s ease;
+}
+/* Define o fundo e a estrutura do card de cada peça. */
+.product-card {
+	background: #e5e3df;
+	border: 8px solid #e5e3df;
+	border-radius: 2px;
+	overflow: hidden;
+}

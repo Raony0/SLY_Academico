@@ -1,0 +1,67 @@
+/* ESTILOS EXCLUSIVOS DA PAGINA CONTACT */
+.contact-header .editorial-subtitle {
+	max-width: 500px; /* Limita a largura do subtitulo de contato. */
+}
+.contact-section {
+	padding-bottom: 130px; /* Cria espaco abaixo do formulario. */
+}
+.contact-links {
+	margin-top: 50px; /* Separa os links de contato do texto introdutorio. */
+}
+.contact-links a {
+	display: flex; /* Coloca o texto e o icone na mesma linha. */
+	align-items: center; /* Alinha o texto e o icone verticalmente. */
+	justify-content: space-between; /* Coloca o icone no lado oposto. */
+	padding: 17px 0; /* Aumenta a area clicavel do link. */
+	border-top: 1px solid var(--line); /* Separa cada link. */
+	font-size: 13px; /* Define o tamanho dos links de contato. */
+}
+.contact-links a:last-child {
+	border-bottom: 1px solid var(--line); /* Fecha a lista com uma borda inferior. */
+}
+.contact-links a:hover {
+	font-weight: 600; /* Destaca o link ao passar o mouse. */
+}
+.sly-form {
+	padding: 50px; /* Cria espaco interno no formulario. */
+	background: #e8e8e3; /* Diferencia o formulario do fundo da pagina. */
+}
+.sly-form .form-label {
+	margin-bottom: 10px; /* Separa o rotulo do campo. */
+	font-size: 10px; /* Mantem os rotulos discretos. */
+	font-weight: 600; /* Destaca os rotulos. */
+	letter-spacing: .13em; /* Aplica o estilo tipografico da marca. */
+}
+.sly-form .form-control {
+	min-height: 50px; /* Garante uma altura confortavel para os campos. */
+	padding: 12px 0; /* Define o espaco interno dos campos. */
+	border: 0; /* Remove as bordas padrao. */
+	border-bottom: 1px solid #999; /* Usa uma linha inferior para cada campo. */
+	border-radius: 0; /* Mantem os cantos retos. */
+	background: transparent; /* Integra os campos ao fundo do formulario. */
+	color: var(--black); /* Mantem o texto dos campos escuro. */
+	box-shadow: none; /* Remove a sombra padrao do Bootstrap. */
+}
+.sly-form .form-control:focus {
+	border-color: var(--black); /* Destaca o campo que esta em uso. */
+	box-shadow: none; /* Evita uma sombra padrao conflitante. */
+}
+.sly-form textarea {
+	resize: vertical; /* Permite ajustar a altura da mensagem. */
+}
+.sly-submit {
+	background: var(--black); /* Cria um botao escuro de alto contraste. */
+	color: white; /* Mantem o texto do botao legivel. */
+}
+.sly-submit:hover {
+	background: #333; /* Clareia levemente o botao no hover. */
+}
+/* Impede que o conteúdo das colunas ultrapasse seus limites. */
+.contact-section .row > [class*="col-"] {
+	min-width: 0;
+}
+.contact-section .section-title {
+	max-width: 100%;
+	overflow-wrap: anywhere;
+}
+
